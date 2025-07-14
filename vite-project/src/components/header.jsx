@@ -13,11 +13,11 @@ function Header() {
         </NavLink>
 
         {/* Link works like NavLink but no active style */}
-        <Link to="/about" style={{ textDecoration: "none" }}>
+        <Link to="/abouts" style={{ textDecoration: "none" }}>
           About
         </Link>
 
-        <Link to="/about" style={{ textDecoration: "none" }}>
+        <Link to="/contacts" style={{ textDecoration: "none" }}>
           Contact
         </Link>
       </nav>
