@@ -5,60 +5,60 @@ import "tailwindcss";
 import './App.css';
 
 function App() {
-  const [counter, setCounter] = useState(5);
+  // const [counter, setCounter] = useState(5);
   // const [color,setcolor] = useState("olive")
-const [length , setlength] = useState(8)
-const [numberallow , setnumberallow] = useState(false)
-const [charallow , setcharallow] = useState(false)
-const [password , setpassword] = useState("")
+// const [length , setlength] = useState(8)
+// const [numberallow , setnumberallow] = useState(false)
+// const [charallow , setcharallow] = useState(false)
+// const [password , setpassword] = useState("")
 
-const passwordref = useRef(null)
+// const passwordref = useRef(null)
 
 
-const passwordgenrator = useCallback(() =>{
-  let pass =  ""
-  let str =  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+// const passwordgenrator = useCallback(() =>{
+//   let pass =  ""
+//   let str =  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-  if(numberallow) str += "0123456789"
-  if(charallow) str += "!@#$%^&*(){}[]~'";
+//   if(numberallow) str += "0123456789"
+//   if(charallow) str += "!@#$%^&*(){}[]~'";
 
-  for(let i = 1;  i<= length; i++){
-    let char = (Math.random() * str.length + 1)
+//   for(let i = 1;  i<= length; i++){
+//     let char = (Math.random() * str.length + 1)
 
-     pass += str.charAt(char);
-  }
+//      pass += str.charAt(char);
+//   }
 
-  setpassword(pass)
-},[length,numberallow,charallow])
-passwordref.current?.select();
-const copypassword = useCallback(() => {
+//   setpassword(pass)
+// },[length,numberallow,charallow])
+// passwordref.current?.select();
+// const copypassword = useCallback(() => {
 
-window.navigator.clipboard.writeText(password)
-},[password])
+// window.navigator.clipboard.writeText(password)
+// },[password])
 
-useEffect(()=>{
-  passwordgenrator()
-},[length,numberallow,charallow,setpassword])
-  const addvalue = () => {
-    const newCount = counter + 1;
+// useEffect(()=>{
+//   passwordgenrator()
+// },[length,numberallow,charallow,setpassword])
+//   const addvalue = () => {
+//     const newCount = counter + 1;
 
-    if (newCount > 20) {
-      setCounter(1);
-    } else {
-      setCounter(newCount);
-    }
-  };
+//     if (newCount > 20) {
+//       setCounter(1);
+//     } else {
+//       setCounter(newCount);
+//     }
+//   };
 
-  const minuscount = () => {
-    const newCount = counter - 1;
+//   const minuscount = () => {
+//     const newCount = counter - 1;
 
-    if (newCount < 0) {
-      alert("Minus not allowed. Resetting to 1.");
-      setCounter(1);
-    } else {
-      setCounter(newCount);
-    }
-  };
+//     if (newCount < 0) {
+//       alert("Minus not allowed. Resetting to 1.");
+//       setCounter(1);
+//     } else {
+//       setCounter(newCount);
+//     }
+//   };
 
   return (
     <>
